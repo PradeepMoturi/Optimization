@@ -60,15 +60,57 @@ f\sbrak{t \lambda_1 + \brak{1-t}\lambda_2} \leq
 t f\brak{\lambda_1} + \brak{1-t}f\brak{\lambda_2}
 \end{align}
 %
-for $\quad 0 < t < 1$.  This is true for any convex function.
+for $\quad 0 < t < 1$.  This is true for any convex function.\\
 %
+\textbf{Solution: } Consider a convex function $f$. By the definition of a convex function, a secant joining any two points on $f$ should lie above the graph $y=f(x)$.\\
+Consider the two points to be $(\lambda_1,f(\lambda_1))$ and $(\lambda_2,f(\lambda_2))$ and a value $t$ such that $0 < t < 1$.\\
+A point on the secant between those points will be \\ 
+$(t\lambda_1+(1-t)\lambda_2,t f(\lambda_1)+(1-t)f(\lambda_2))$ \\
+The point on the $y=f(x)$ at corresponding x coordinate will be\\ 
+$(t\lambda_1+(1-t)\lambda_2, f\sbrak{t\lambda_1+(1-t)\lambda_2})$\\
+For the secant to lie above the graph, y-coordinate of point on secant should be above the y-coordinate of corresponding point on the graph.\\
+i.e $ f\sbrak{t\lambda_1+(1-t)\lambda_2} \leq f(\lambda_1)+(1-t)f(\lambda_2)$
+
 \item Show that 
 %
 \begin{equation}
 \eqref{eq:convex_def} \quad \implies f^{(2)}(\lambda) > 0
 \end{equation}
 %
-\item Show that a covex function has a unique minimum.
+\item Show that a convex function has a unique minimum.\\
+%
+\textbf{Solution:}
+Consider a convex function $f$ having global minimum at $x_1$ and local minimum at $x_2$ ($x_1\neq x_2$)
+\begin{center}
+    i.e $f(x_1)\leq f(x_2)$
+\end{center}
+From the definition of convexity, we have for $0< \theta<1$,
+\begin{center}
+    $f(\theta x_1+(1 - \theta)x_2) \leq \theta f(x_1)+(1 - \theta)f(x_2) $
+\end{center}
+Since $\theta$ is positive
+\begin{equation} 
+\begin{split}
+    f(x_1)\leq f(x_2)\implies\theta f(x_1)\leq \theta f(x_2)
+\end{split}
+\end{equation}
+which justifies below condition
+\begin{equation} \label{eq1}
+\begin{split}
+    \theta f(x_1)+(1-\theta)f(x_2) &\leq \theta f(x_2)+(1-\theta)f(x_2)\\
+    &\leq f(x_2)
+\end{split}
+\end{equation}
+Replacing this condition to the definition of convexity
+\begin{center}
+    $f(\theta x_1+(1-\theta)x_2) \leq f(x_2)$
+\end{center}
+If $x_2$ is a local minimum, the neighborhood must be defined such as $f(x)\geq f(x_2)$.\\
+To satisfy both conditions it must be that 
+\begin{center}
+    $f(x) = f(x_1) = f(x_2) \forall x_1\leq x\leq x_2 $
+\end{center}
+which shows that f has a unique minimum value.
 %
 \end{enumerate}
 %
