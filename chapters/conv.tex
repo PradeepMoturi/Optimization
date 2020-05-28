@@ -77,6 +77,42 @@ i.e $ f\sbrak{t\lambda_1+(1-t)\lambda_2} \leq f(\lambda_1)+(1-t)f(\lambda_2)$
 \eqref{eq:convex_def} \quad \implies f^{(2)}(\lambda) > 0
 \end{equation}
 %
+\textbf{Solution: }Consider three points $(a,f(a)),$ $(b,f(b))$ and $(c,f(C))$ such that $a<b<c$.\\
+\eqref{eq:convex_def} with $t=\frac{c-b}{c-a}$ and $\lambda_1 =a$, $\lambda_2 =c$ gives
+\begin{center}
+    $f(b) \leq \sbrak{\frac{c-b}{c-a}}f(a) + \sbrak{\frac{b-a}{c-a}}f(c)$
+\end{center}
+%
+which solves to for any $a<b<c$,
+\begin{align}
+    \frac{f(b)-f(a)}{b-a} \leq \frac{f(c)-f(a)}{c-a}
+\end{align}
+%
+Apply limits
+\begin{align*}
+    \lim_{b-a\to 0}\frac{f(b)-f(a)}{b-a} &\leq \lim_{c-b\to 0}\frac{f(c)-f(b)}{c-b} \\
+    \implies f^{(1)}(b) \leq f^{(1)}(c)\\
+    \implies f^{(1)}(c) - f^{(1)}(b) &\geq 0 
+\end{align*}  
+
+Because $c-b > 0$
+\begin{align*}
+    \frac{f^{(1)}(c) - f^{(1)}(b)}{c-b} &\geq 0
+\end{align*}  
+%
+Apply limit
+\begin{align*}  
+    \lim_{c-b\to 0} \frac{f^{(1)}(c) - f^{(1)}(b)}{c-b} & \geq 0\\
+    \implies f^{(2)}(c) & \geq 0 \numberthis 
+\end{align*} 
+%
+As a,b,c are chosen arbitrarily with $a<b<c$ for any $\lambda$ in domain of f,\\
+\begin{align}
+{f^{(2)}(\lambda) \geq 0}
+\end{align}
+%
+%
+%
 \item Show that a convex function has a unique minimum.\\
 %
 \textbf{Solution:}
